@@ -1,21 +1,25 @@
-function GameModel(nrOfRounds) {
-  this.currentRoundNr = 1;
-  this.nrOfRounds = nrOfRounds;
-  this.running = false;
-}
+define([], function() {
 
-GameModel.prototype.start = function() {
-  this.running = true;
-};
+  function GameModel(nrOfRounds) {
+    this.currentRoundNr = 1;
+    this.nrOfRounds = nrOfRounds;
+    this.running = false;
+  }
 
-GameModel.prototype.pause = function() {
-  this.running = false;
-};
+  GameModel.prototype.start = function() {
+    this.running = true;
+  };
 
-GameModel.prototype.update = function(dt) {
-  // handle player input
+  GameModel.prototype.pause = function() {
+    this.running = false;
+  };
 
-  // update ball
-};
+  GameModel.prototype.update = function(dt) {
+    // handle player input
 
-return GameModel;
+    // update ball
+  };
+
+  return GameModel;
+
+});
