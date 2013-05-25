@@ -1,5 +1,5 @@
 requirejs.config({
-  baseUrl: 'javascripts/lib',
+  baseUrl: 'javascripts/game',
   paths: {
     app: '../game'
   }
@@ -20,16 +20,21 @@ requirejs(['ball', 'paddle'], function(Ball, Paddle) {
       width: 800
     , height: 400
     }
-  };
+  }
+  // set up the canvas
+  , canvas = document.getElementById('canvas');
 
-  // init code
-  var leftPaddle = new Paddle()
-    , rightPaddle = new Paddle()
-    , ball = new Ball();
+  var Renderer = (function() {
+    var draw = function() {
+      //  draw background
+      //  draw left paddle
+      //  draw right paddle
+      //  draw ball
+    };
 
-  // draw
-  //  draw background
-  //  draw left paddle
-  //  draw right paddle
-  //  draw ball
+    return {
+      draw: draw
+    };
+  })();
+  requestAnimFrame(Renderer.draw);
 });
